@@ -3,12 +3,20 @@ Laravel json-rpc test
 
 <p><strong>How to use</strong></p>
 weather-history (json-rpc server)
-<li>1. Edit .env file to set your MySql settings
-<li>2. Run "php artisan migrate" to create DB table
-<li>3. Run "php artisan db:seed" to fill DB table with dummy data
-<li>4. Run "php artisan serve" to start it
+<li>Edit .env file to set your MySql settings
+<li>Run "php artisan migrate" to create DB table
+<li>Run "php artisan db:seed" to fill DB table with dummy data
+<li>Run "php artisan serve" to start it
 <br>
 site (json-rpc client)
-<li>1. Edit .env file , set JSON_RPC_SERVER_URL= to url where json-rpc server started (127.0.0.1:8000 by default)
-<li>2. Run "php artisan serve" to start it
+<li>In .env file set param JSON_RPC_SERVER_URL to url where json-rpc server started (127.0.0.1:8000 by default)
+<li>Run "php artisan serve" to start it
 <br>
+<br>
+Server API access using POST request to address server_url/api/
+<br>
+Available methods:
+<br>
+{"jsonrpc": "2.0", "method": "weather.getByDate", "params": {"date": "2020-02-30"}, "id": 1}
+{"jsonrpc": "2.0", "method": "weather.getHistory", "params": {"lastDays": 30}, "id": 1}
+
