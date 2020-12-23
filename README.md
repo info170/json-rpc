@@ -13,10 +13,11 @@ site (json-rpc client)
 <li>Run "php artisan serve" to start it
 <br>
 <br>
-Server API access using POST request to address server_url/api/
+Access to server API using POST request to address server_url/api/
 <br>
 Available methods:
 <br>
 {"jsonrpc": "2.0", "method": "weather.getByDate", "params": {"date": "2020-02-30"}, "id": 1}
+<br>
 {"jsonrpc": "2.0", "method": "weather.getHistory", "params": {"lastDays": 30}, "id": 1}
 
